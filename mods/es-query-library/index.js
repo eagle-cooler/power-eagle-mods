@@ -2,6 +2,7 @@ const { exec } = require('child_process');
 const util = require('util');
 const path = require('path');
 const execAsync = util.promisify(exec);
+const {EagleApi} = require('@eagle-cooler/utils');
 
 module.exports = {
     name: 'System Library Map',
@@ -36,16 +37,7 @@ module.exports = {
 
     async switchLibrary(libraryPath) {
         try {
-            const response = await fetch("http://localhost:41595/api/library/switch", {
-                method: 'POST',
-                body: JSON.stringify({ libraryPath }),
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            });
-            
-            const result = await response.json();
-            return result;
+            return await EagleApi.library.switch(libraryPath);
         } catch (error) {
             console.error('Failed to switch library:', error);
             throw error;
