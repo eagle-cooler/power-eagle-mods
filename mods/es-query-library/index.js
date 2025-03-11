@@ -13,7 +13,7 @@ module.exports = {
             // Use the es.exe from the same directory as index.js
             const esPath = path.join(__dirname, 'es.exe');
             // Construct the Eagle folder search command
-            const command = `"${esPath}" /ad "*${query}*.library"`;
+            const command = `"${esPath}" /ad -p "**${query}**.library"`;
             
             // Execute the command
             const { stdout, stderr } = await execAsync(command);
