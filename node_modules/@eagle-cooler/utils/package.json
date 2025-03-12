@@ -1,6 +1,6 @@
 {
   "name": "@eagle-cooler/utils",
-  "version": "0.9.3",
+  "version": "0.9.4",
   "publishConfig": {
     "access": "public"
   },
@@ -21,8 +21,7 @@
   ],
   "license": "GPL-3.0-only",
   "dependencies": {
-    "eventsource": "^2.0.2",
-    "node-fetch": "^3.3.2"
+    "eventsource": "^2.0.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.23.4",
