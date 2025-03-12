@@ -48,10 +48,15 @@ module.exports = {
     
     render: () => `
         <div class="eagle-folder-query-container">
-            <div class="search-container">
-                <input type="text" id="folder-search" placeholder="Search Eagle folders...">
+            <div class="folder-search-section">
+                <div class="search-container">
+                    <input type="text" id="folder-search" placeholder="Search Eagle folders...">
+                </div>
+                <div class="button-container">
+                    <button id="refresh-folders" class="refresh-btn">Refresh Folders</button>
+                </div>
             </div>
-            <div class="results-container">
+            <div class="content-section">
                 <div id="folder-results"></div>
             </div>
         </div>
